@@ -11,7 +11,7 @@ public class Example1 {
 		// must set path to geckodriver
 		WebDriver driver;
 		System.setProperty("webdriver.gecko.driver",
-				"/Users/jgower/testing-workspace/libs/geckodriver");
+				"/Users/jgower/eclipse-workspace/libs/geckodriver");
 		driver = new FirefoxDriver();
 		driver.get("http://www.google.com");
 		

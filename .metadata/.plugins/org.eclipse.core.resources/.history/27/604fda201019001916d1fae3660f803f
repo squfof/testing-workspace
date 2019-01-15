@@ -14,7 +14,7 @@ public class Test1 {
 		// Use Firefox to navigate to saucelabs.com
 		// Firefox's geckodriver requires you to specify its path.
 		WebDriver browser;
-		System.setProperty("webdriver.gecko.driver","/Users/jgower/testing-workspace/libs/geckodriver");   
+		System.setProperty("webdriver.gecko.driver","/Users/jgower/eclipse-workspace/libs/geckodriver");   
 		browser = new FirefoxDriver();
 		browser.get("http://saucelabs.com");   
 		

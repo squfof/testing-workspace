@@ -21,6 +21,8 @@ public class HelloWorld {
 
 	public static void main(String[] args) {
 		// test code here
+		//HelloWorld h = new HelloWorld();
+		//h.getMessage();
 		System.out.println("Let's get started!");
 		HelloWorld h = new HelloWorld();
 		System.out.println(h.getMessage());

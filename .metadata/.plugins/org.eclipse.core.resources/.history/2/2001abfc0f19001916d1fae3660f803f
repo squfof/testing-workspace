@@ -15,9 +15,9 @@ public class Example2 {
 		// Setup drive and navigate to local page
 		WebDriver driver;
 		System.setProperty("webdriver.gecko.driver",
-				"/Users/jgower/testing-workspace/libs/geckodriver");
+				"/Users/jgower/eclipse-workspace/libs/geckodriver");
 		driver = new FirefoxDriver();
-		driver.get("file:///Users/jgower/testing-workspace/SeleniumTutorial/src/page.html");
+		driver.get("file:///Users/jgower/eclipse-workspace/SeleniumTutorial/src/page.html");
 		
 		// RADIO BUTTON TEST
 		//

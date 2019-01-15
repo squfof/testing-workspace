@@ -1,7 +1,7 @@
 
 public class ImmutableStack<T> {
 	
-	// basically, this is how Scheme constructs lists, where:
+	// basically, this how Scheme constructs lists, where:
 	// item = (car ...)
 	// previousStack = (cdr ...)
 	private T item;
