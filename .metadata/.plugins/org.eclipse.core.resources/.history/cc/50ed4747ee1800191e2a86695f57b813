@@ -1,0 +1,28 @@
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class Example1 {
+
+	public static void main(String[] args) {
+		
+		// open up Firefox and navigate to Google
+		WebDriver driver;
+		// must set path to geckodriver
+		System.setProperty("webdriver.gecko.driver",
+				"/Users/jgower/eclipse-workspace/libs/geckodriver");
+		driver = new FirefoxDriver();
+		driver.get("http://www.google.com");
+		
+		// search Google for Pluralsight
+		WebElement searchBox = driver.findElement(By.xpath("/html/body/div/div[3]/form/div[2]/div/div[1]/div/div[1]/input"));
+		searchBox.sendKeys("pluralsight");
+		searchBox.submit();
+		
+		// click Images
+		WebElement imagesLink = driver.findElement(By.linkText("Images"));
+		imagesLink.click();
+	}
+
+}

@@ -1,0 +1,22 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class StringStackTest {
+
+	@Test
+	void canPopOneItem() {
+		StringStack ss = new StringStack(100);
+		ss.push("foo");
+		assertEquals("foo", ss.pop(), "Should pop 'foo'");
+	}
+	
+	@Test
+	void canPopMultipleItems() {
+		StringStack ss = new StringStack(100);
+		ss.push("foo");
+		ss.push("bar");
+		assertEquals("bar", ss.pop(), "Should pop 'bar'");
+		assertEquals("foo", ss.pop(), "Should pop 'foo'");
+	}
+}

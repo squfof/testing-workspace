@@ -1,0 +1,24 @@
+
+public class StringStack {
+	
+	private String[] stack;
+	private int i;
+	
+	public StringStack(int n) {
+		stack = new String[n];
+		i = 0;
+	}
+	
+	public String pop() {
+		return "foo";
+	}
+	
+	public void push(String s) {
+		stack[i++] = s;
+	}
+
+	public static void main(String[] args) {
+		// test class here
+	}
+
+}

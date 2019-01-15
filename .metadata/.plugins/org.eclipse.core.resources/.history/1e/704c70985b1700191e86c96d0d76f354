@@ -1,0 +1,8 @@
+
+public class StringStack {
+
+	public static void main(String[] args) {
+		// test class here
+	}
+
+}

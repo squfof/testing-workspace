@@ -1,0 +1,34 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class HelloWorldTest {
+	private HelloWorld h1 = new HelloWorld();
+	private HelloWorld h2 = new HelloWorld();
+	
+
+	@Test
+	void nameShouldBeEmpty() {
+		System.out.println("Test 1...");
+		assertEquals(h1.getName(), "", "Name should be empty!");
+	}
+	
+	@Test
+	void messageShouldBeHello() {
+		assertEquals(h1.getMessage(), "Hello!", "Message should be 'Hello!'");
+	}
+	
+	@Test
+	void nameShouldBeJason() {
+		assertEquals(h2.getName(), "Jason", "Name should be 'Jason'");
+	}
+
+	@Test
+	void messageShouldBeHelloJason() {
+		assertEquals(h2.getMessage(), "Hello Jason!", "Message should be 'Hello Jason!'");
+	}
+}

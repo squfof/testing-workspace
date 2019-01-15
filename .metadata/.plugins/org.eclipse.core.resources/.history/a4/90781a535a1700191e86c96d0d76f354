@@ -1,0 +1,42 @@
+
+public class FizzBuzz {
+	
+	private int n;
+	
+	public FizzBuzz(int n) {
+		this.n = n;
+	}
+	
+	public String getResult() {
+		String r = ""; // stores return value
+		
+		if (isDivisibleByThree()) {
+			r += "Fizz";
+			if (isDivisibleByFive())
+				r += "Buzz";
+		}
+		else if (isDivisibleByFive())
+			r += "Buzz";
+		else
+			r += String.valueOf(n);
+		
+		return r;
+	}
+	
+	private boolean isDivisibleByThree() {
+		return n % 3 == 0;
+	}
+	
+	private boolean isDivisibleByFive() {
+		return n % 5 == 0;
+	}
+
+	public static void main(String[] args) {
+		// test class here
+		for (int n = 1; n < 31; n++) {
+			FizzBuzz fb = new FizzBuzz(n);
+			System.out.println(fb.getResult());
+		}		
+	}
+
+}

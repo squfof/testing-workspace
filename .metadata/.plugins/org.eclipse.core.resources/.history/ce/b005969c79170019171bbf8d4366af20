@@ -1,0 +1,15 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class ImmutableStackTest {
+
+	@Test
+	void canPushItem() {
+		ImmutableStack<String> stack = new ImmutableStack<String>(100);
+		ImmutableStack<String> fooStack = stack.push("foo");
+		assertEquals(0, stack.count(), "Original stack should have 0 elements.");
+		assertEquals(1, fooStack.count(), "New stack should have 1 element.");
+	}
+
+}

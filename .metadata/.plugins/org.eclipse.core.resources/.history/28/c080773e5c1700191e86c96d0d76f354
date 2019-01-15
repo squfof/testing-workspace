@@ -1,0 +1,24 @@
+
+public class StringStack {
+	
+	private String[] stack;
+	private int currentIndex;
+	
+	public StringStack(int capacity) {
+		stack = new String[capacity];
+		currentIndex = 0;
+	}
+	
+	public String pop() {
+		return "foo";
+	}
+	
+	public void push(String s) {
+		stack[currentIndex++] = s;
+	}
+
+	public static void main(String[] args) {
+		// test class here
+	}
+
+}

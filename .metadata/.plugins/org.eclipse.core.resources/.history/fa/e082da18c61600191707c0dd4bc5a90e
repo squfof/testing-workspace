@@ -1,0 +1,20 @@
+import static org.junit.jupiter.api.Assertions.*;
+
+
+
+
+import org.junit.jupiter.api.Test;
+
+
+
+class HelloWorldTest {
+	
+	private HelloWorld h = new HelloWorld();
+	
+	@Test
+	void test() {
+		assertEquals(h.getName(),"");
+	    assertEquals(h.getMessage(),"Hello!");
+	}
+
+}
