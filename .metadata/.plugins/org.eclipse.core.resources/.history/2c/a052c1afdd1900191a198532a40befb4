@@ -1,0 +1,40 @@
+import java.net.MalformedURLException;
+import java.net.URL;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.ie.InternetExplorerOptions;
+import org.openqa.selenium.remote.RemoteWebDriver;
+
+public class GoToProjectEulerWithGridSeleniumServer {
+	
+	public static void main(String[] args) throws MalformedURLException {
+	
+		// use Selenium server in grid 
+		URL url = new URL("http://127.0.0.1:4444/wd/hub");
+		//FirefoxOptions capabilities = new FirefoxOptions();
+		InternetExplorerOptions capabilities = new InternetExplorerOptions();
+		WebDriver driver = new RemoteWebDriver(url, capabilities);
+		driver.get("http://www.projecteuler.net");
+		driver.manage().window().maximize();		
+	
+		System.out.println(driver.getCurrentUrl());
+	
+		// click on the Problems link
+		WebElement problemsLink = driver.findElement(By.linkText("Problems"));
+		problemsLink.click();
+	
+		System.out.println(driver.getCurrentUrl());
+	
+		// click on the Collatz problem
+		WebElement collatzLink = driver.findElement(By.partialLinkText("Collatz"));
+		// element is obscured, so need the following bit of code to click it
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
+		executor.executeScript("arguments[0].click();", collatzLink);
+			
+		System.out.println(driver.getCurrentUrl());
+	}
+}

@@ -19,9 +19,8 @@ public class Example1 {
 		
 		// search Google for Pluralsight
 		WebElement searchBox = driver.findElement(By.xpath("/html/body/div/div[3]/form/div[2]/div/div[1]/div/div[1]/input"));
-		//WebElement searchBox = driver.findElement(By.id("submit"));
 		searchBox.sendKeys("pluralsight");
-		WebElement submitBox = driver.findElement(By.xpath("/html/body/div/div[3]/form/div[2]/div/div[3]/center/input[1]"));
+		WebElement submitBox = driver.findElement(By.name("btnK"));
 		submitBox.click();
 		
 		System.out.println(driver.getCurrentUrl());
