@@ -17,11 +17,11 @@ public class GoToProjectEulerWithGridSeleniumServer {
 	public static void main(String[] args) throws MalformedURLException {
 	
 		// use remote Selenium server in grid
-		URL url = new URL("http://192.168.0.42:4444/wd/hub");
+		URL url = new URL("http://192.168.0.16:4444/wd/hub");
 		// pick a browser
-		//FirefoxOptions capabilities = new FirefoxOptions();
+		FirefoxOptions capabilities = new FirefoxOptions();
 		//SafariOptions capabilities = new SafariOptions();
-		ChromeOptions capabilities = new ChromeOptions();
+		//ChromeOptions capabilities = new ChromeOptions();
 		WebDriver driver = new RemoteWebDriver(url, capabilities);
 		driver.get("http://www.projecteuler.net");
 		driver.manage().window().maximize();		

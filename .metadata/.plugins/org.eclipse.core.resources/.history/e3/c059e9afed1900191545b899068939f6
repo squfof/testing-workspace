@@ -20,8 +20,8 @@ public class GoToProjectEulerWithGridSeleniumServer {
 		URL url = new URL("http://192.168.0.42:4444/wd/hub");
 		// pick a browser
 		//FirefoxOptions capabilities = new FirefoxOptions();
-		//SafariOptions capabilities = new SafariOptions();
-		ChromeOptions capabilities = new ChromeOptions();
+		SafariOptions capabilities = new SafariOptions();
+		//ChromeOptions capabilities = new ChromeOptions();
 		WebDriver driver = new RemoteWebDriver(url, capabilities);
 		driver.get("http://www.projecteuler.net");
 		driver.manage().window().maximize();		
