@@ -1,7 +1,7 @@
-import static org.junit.jupiter.api.Assertions.*;
-
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals ;
+import static org.junit.jupiter.api.Assertions.assertThrows ;
+import org.junit.jupiter.api.BeforeEach ;
+import org.junit.jupiter.api.Test ;
 
 class GenericStackTest {
 	
@@ -33,9 +33,7 @@ class GenericStackTest {
 	
 	@Test
 	void shouldNotBeAbleToPushNull() {
-		assertThrows(IllegalArgumentException.class,
-				() -> {gs.push(null);},
+		assertThrows(IllegalArgumentException.class, () -> {gs.push(null);},
 				"Should not push null");
 	}
-
 }

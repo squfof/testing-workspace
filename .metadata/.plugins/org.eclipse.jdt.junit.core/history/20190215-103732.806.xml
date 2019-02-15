@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="Test1" project="SeleniumTutorial" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="Test1" time="7.717" uniqueid="[engine:junit-jupiter]/[class:Test1]">
+    <testcase name="site_header_is_on_home_page" classname="Test1" time="7.717" displayname="site_header_is_on_home_page()" uniqueid="[engine:junit-jupiter]/[class:Test1]/[method:site_header_is_on_home_page()]"/>
+  </testsuite>
+</testrun>
